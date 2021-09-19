@@ -1,8 +1,8 @@
 body {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.grid_container {    
+.grid_container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     max-width: 1180px;
@@ -14,48 +14,66 @@ body {
     margin-right: auto;
 }
 
-.sub_grid {
-    display: grid;
-    row-gap: 20px;
-}
-
 .sub_grid_2 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 0px;
+    display: flex;
 }
 
-div.sub_grid_2 {
-    align-items: center;
-}
-
-
-.sub_grid_3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 0px;
-}
-
-
-div.sub_grid_3.col_4 {
-    justify-items: left;
+div.sub_grid_2 div {
+    align-self: center;
 }
 
 .sub_grid_4 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     row-gap: 0px;
+    column-gap: 20px;
 }
 
+div.col_4 {
+    display: flex;
+    flex-basis: 380px;
+    flex-wrap: wrap;
+    align-content: center;
+    padding-right: 20px;
+}
+
+div.col_4 div.col_4 {
+    justify-content:space-between;
+} 
+
 .sub_grid_6 {
+    background-color: gainsboro;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     row-gap: 0px;
+    column-gap: 20px;
 }
 
-img {
-    float: right;
-    padding: 2px;
+section div div.col_6 {
+    padding: 20px;
+    padding-bottom: 30px;
+}
+
+.icons {
+    display: flex;
+    flex-basis: 380px;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content:space-between;
+    padding-right: 37%;
+}
+
+.button {
+    padding: 10px;
+    text-transform: uppercase;
+    background-color:darkorange;
+}
+
+/*Hier kommen die Textformatierungen*/
+
+h1 {
+    font-size: 36pt;
+    padding-top: 60px;
 }
 
 h1,
@@ -63,17 +81,43 @@ h2 {
     display: justify;
     text-align: center;
     justify-content: center;
+    margin: 5px;
+
 }
 
+h1,
+h2,
+h3 {
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 27pt;
+    font-weight: 400;
+    padding-bottom: 20px;
+}
+
+h3,
 p {
     font-size: 9pt;
 }
 
-div.sub_grid_2 p {
-    margin-left: auto;
-    margin-right: auto;
+h3.text {
+    margin: 0px;
+    padding-bottom: 15px;
 }
 
+p.text{
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.sub_grid_2 p{
+    padding-left: 15px;
+}
+/*hier enden die textformatierungen*/
+
+/*allgemeine col regeln*/
 .col_2 {
     grid-column: span 2;
 }
@@ -84,10 +128,6 @@ div.sub_grid_2 p {
 
 .col_4 {
     grid-column: span 4;
-}
-
-div.col_4 {
-    background-color: aliceblue;
 }
 
 .col_5 {
@@ -121,3 +161,4 @@ div.col_4 {
 .col_12 {
     grid-column: span 12;
 }
+/*allgemeine column regeln ende*/
